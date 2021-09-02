@@ -1,4 +1,5 @@
 {
+  "homepage": "http://paulanthonybegley.github.io/website",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
@@ -6,7 +7,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export",
+    "predeploy": "npm run export",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "next": "11.1.2",
@@ -15,6 +19,7 @@
   },
   "devDependencies": {
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2"
+    "eslint-config-next": "11.1.2",
+    "gh-pages": "^3.2.3"
   }
 }
